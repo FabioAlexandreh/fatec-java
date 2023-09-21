@@ -1,0 +1,141 @@
+Código aula 1 atividade
+
+
+Se a pessoa é menor de idade, adulto ou idoso(a):
+
+import java.util.Scanner;
+public class ClassificacaoIdade {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.print("Digite a idade da pessoa: ");
+int idade = scanner.nextInt();
+if (idade < 18) {
+System.out.println("Menor de idade");
+} else if (idade < 60) {
+System.out.println("Adulto(a)");
+} else {
+System.out.println("Idoso(a)");
+}
+scanner.close();
+}
+}
+---------------------------------------------------------
+
+Soma dos números ímpares:
+
+import java.util.Scanner;
+public class SomaNumerosImpares {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.print("Digite um numero inteiro n: ");
+int n = scanner.nextInt();
+int soma = 0;
+int numeroImpar = 1;
+for (int i = 0; i < n; i++) {
+soma += numeroImpar;
+numeroImpar += 2;
+}
+System.out.println("A soma dos primeiros " + n + " numeros impares é: " + soma);
+scanner.close();
+}
+}
+
+--------------------------------------------------------
+
+Digitar 5 nomes e saber se está presente ou não:
+
+import java.util.Scanner;
+import java.util.ArrayList;
+public class ListaDeNomes {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+ArrayList<String> nomes = new ArrayList<String>();
+System.out.println("Insira 5 nomes:");
+for (int i = 0; i < 5; i++) {
+System.out.print("Nome " + (i + 1) + ": ");
+String nome = scanner.nextLine();
+nomes.add(nome);
+}
+System.out.print("Digite um nome para verificar: ");
+String nomeVerificar = scanner.nextLine();
+boolean encontrado = false;
+for (String nome : nomes) {
+if (nome.equalsIgnoreCase(nomeVerificar)) {
+encontrado = true;
+break;
+}
+}
+if (encontrado) {
+System.out.println("O nome " + nomeVerificar + " esta presente na lista.");
+} else {
+System.out.println("O nome " + nomeVerificar + " nao esta presente na lista.");
+}
+scanner.close();
+}
+}
+
+------------------------------------------------------------
+
+Senha secreta:
+
+import java.util.Scanner;
+public class SenhaSecreta {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+String senhaSecreta = "python123";
+boolean senhaCorreta = false;
+while (!senhaCorreta) {
+System.out.print("Digite a senha: ");
+String senhaDigitada = scanner.nextLine();
+if (senhaDigitada.equals(senhaSecreta)) {
+senhaCorreta = true;
+System.out.println("Senha correta! Acesso concedido.");
+} else {
+System.out.println("Senha incorreta. Tentativa invalida.");
+}
+}
+scanner.close();
+}
+}
+
+-----------------------------------------------------------------
+
+Disciplinas e a media final e mostra se o aluno passou ou não:
+
+import java.util.Scanner;
+public class GerenciadorNotas {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.print("Digite a quantidade de disciplinas no semestre: ");
+int quantidadeDisciplinas = scanner.nextInt();
+scanner.nextLine(); // Limpar o buffer
+System.out.print("Digite a media minima para aprovacao: ");
+double mediaMinima = scanner.nextDouble();
+scanner.nextLine(); // Limpar o buffer
+String[] nomesDisciplinas = new String[quantidadeDisciplinas];
+double[] notasP1 = new double[quantidadeDisciplinas];
+double[] notasP2 = new double[quantidadeDisciplinas];
+double[] notasTrabalho = new double[quantidadeDisciplinas];
+for (int i = 0; i < quantidadeDisciplinas; i++) {
+System.out.print("Digite o nome da disciplina " + (i + 1) + ": ");
+nomesDisciplinas[i] = scanner.nextLine();
+System.out.print("Digite a nota da P1: ");
+notasP1[i] = scanner.nextDouble();
+System.out.print("Digite a nota da P2: ");
+notasP2[i] = scanner.nextDouble();
+System.out.print("Digite a nota do trabalho: ");
+notasTrabalho[i] = scanner.nextDouble();
+scanner.nextLine(); // Limpar o buffer
+}
+System.out.println("\nBoletim do Aluno:\n");
+for (int i = 0; i < quantidadeDisciplinas; i++) {
+double media = (notasP1[i] + notasP2[i] + notasTrabalho[i]) / 3.0;
+String situacao = media >= mediaMinima ? "Aprovado" : "Reprovado";
+System.out.println("Disciplina: " + nomesDisciplinas[i]);
+System.out.println("Media: " + media);
+System.out.println("Situacao: " + situacao);
+System.out.println();
+}
+scanner.close();
+}
+}

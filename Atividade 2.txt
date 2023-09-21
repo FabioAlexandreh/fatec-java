@@ -1,0 +1,386 @@
+1.Array de Números Pares:
+Gere um array de 10 números aleatórios. Use um loop para imprimir apenas os números pares.
+
+import java.util.Scanner;
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Scanner = new Scanner(System.in);
+	    Random random = new Random();
+	   int[] n = new int[10];
+
+		for(int i = 0; i < 10; i++){
+			n[i] = random.nextInt(100);
+		}
+
+		for(int i = 0; i < 10; i++){
+			if(n[i] % 2 == 0){
+				System.out.println(n[i]);
+    	     }
+    	    
+    	}
+    	    
+	}
+}
+
+
+2.Adivinhe o Número:
+Gere um número aleatório entre 1 e 100 e peça ao usuário para adivinhá-lo. Dê dicas se o palpite estiver alto ou baixo
+
+import java.util.Random;
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in); 
+		Random rand = new Random();
+		int nSorteado = rand.nextInt(100);
+		int nDigitado = -1;
+
+		while(nDigitado != nSorteado){
+
+			System.out.print("Digite um número de 0 a 100: ");
+			nDigitado = input.nextInt();
+
+			if(nDigitado > nSorteado){
+				System.out.println("O número digitado é maior que o sorteado!");
+			}
+			else{
+				System.out.println("O número digitado é menor que o sorteado!");
+			}
+		}
+
+		System.out.print("Parabéns!!");
+	}
+}
+
+
+3.Média de Valores:
+Crie um array com 20 números aleatórios. Calcule e imprima a média desses números.
+
+import java.util.Scanner;
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Scanner = new Scanner(System.in);
+	    Random random = new Random();
+	    int media = 0;
+		int soma = 0;
+		int[] array = new int[20];
+
+		for(int i = 0; i < 20; i++){
+			array[i] = random.nextInt(100);
+			soma += array[i];
+		}
+
+		media = soma/20;
+
+		System.out.print("A média do array de 20 numeros é: " + media);
+    	 
+	    
+	}
+}
+
+
+4.Número Máximo e Mínimo:
+Gere um array de 15 números aleatórios e, em seguida, determine e imprima o maior e o menor valor.
+
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Random random = new Random();
+	    int tamArrey = 15;
+	    int[] nAleatorios = new int[tamArrey];
+	    for (int i = 0;i < tamArrey ;i++ ){
+	        nAleatorios[i] = random.nextInt(20) + 1;
+	    } 
+	    int maior = nAleatorios[0];
+	    int menor = nAleatorios[0];
+	    
+	    for (int n : nAleatorios){
+		    if (n > maior){
+		        maior = n;
+		    }
+		    if (n < menor){
+		        menor = n;
+		    } 
+		} 
+		System.out.println("NÚMEROS ALEATÓRIOS: ");
+		for (int n : nAleatorios){
+		    System.out.println(n + "");
+		}
+		System.out.println("\nMAIOR VALOR: " + maior);
+		System.out.println("\nMENOR VALOR: " + menor);
+	}
+}
+
+
+5.Contando Ímpares:
+Gere um array com 30 números aleatórios. Use um loop para contar quantos desses números são ímpares.
+
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Random random = new Random();
+	    int tamArrey = 30;
+	    int[] nAleatorios = new int[tamArrey];
+	    for (int i = 0;i < tamArrey ;i++ ){
+	        nAleatorios[i] = random.nextInt(30) ;
+	    } 
+	    int cont_impar = 0;
+	    for(int n : nAleatorios){
+	        if (n % 2 != 0){
+	            cont_impar++;
+	            
+	        } 
+	    }
+	    System.out.println("NÚMEROS ALEATÓRIOS: ");
+	    for (int n : nAleatorios ) {
+		   
+		    System.out.println(n + " ");
+		}
+		System.out.println("\nQUANTIDADE DE NÚMEROS IMPARES: " + cont_impar);
+	}
+}
+
+
+
+6.Reversão de Array:
+Crie um array com 10 números aleatórios e, em seguida, imprima esse array em ordem reversa.
+
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Random random = new Random();
+	    int tamArrey = 30;
+	    int[] nAleatorios = new int[tamArrey];
+	    for (int i = 0;i < tamArrey ;i++ ){
+	        nAleatorios[i] = random.nextInt(30) ;
+	    } 
+	    int cont_impar = 0;
+	    for(int n : nAleatorios){
+	        if (n % 2 != 0){
+	            cont_impar++;
+	            
+	        } 
+	    }
+	    System.out.println("NÚMEROS ALEATÓRIOS: ");
+	    for (int n : nAleatorios ) {
+		   
+		    System.out.println(n + " ");
+		}
+		System.out.println("\nQUANTIDADE DE NÚMEROS IMPARES: " + cont_impar);
+	}
+}
+
+
+
+7.Frequência de Números:
+Gere um array com 50 números aleatórios entre 1 e 10. Conte e imprima quantas vezes cada número aparece no array.
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Scanner = new Scanner(System.in);
+	    int[] n = new int[10];
+	    int[] freqn = new int[10];
+	    for (int i = 0; i < 10 ;i++ ){
+	        System.out.println("DIGITE O " + (i + 1) + "° NUMERO: ") ;
+	        n[i] = Scanner.nextInt();
+	        freqn[i] = 0;
+	    }
+    	for (int i = 0; i < 10; i++){
+    	     int atual = n[i];
+    	    
+    	     for (int j = 0; j < 10 ; j++ ){
+    	         if (n[j] == atual){
+    	                freqn[i]++;
+    	         }
+    	        
+    	     }
+    	 }
+    	 int valorMfrequente = n[0];
+    	 int freqMax = freqn[0];
+    	 for (int i = 1;i >10 ;i++ ){
+    	    if(freqn[i] > freqMax){
+    	        valorMfrequente = n[i];
+    	        freqMax = freqn[i];
+    	    }
+    	    
+    	 }
+    	 System.out.println("VALOR MAIS FREQUENTE É " + valorMfrequente + " COM  " + freqMax + " VEZES DE FREQUENCIA");
+	    
+	}
+}
+
+
+8.Preenchendo o Array:
+Crie um programa que peça ao usuário para inserir 10 números. Armazene esses números em um array e, em seguida, imprima o valor mais frequente e a sua frequência.
+
+
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Random random = new Random();
+	    int tamArrey = 50;
+	    int[] nAleatorios = new int[tamArrey];
+	    for (int i = 0;i < tamArrey ;i++ ){
+	        nAleatorios[i] = random.nextInt(10) ;
+	    }
+	    int[] freqn = new int[10];
+	    for (int n : nAleatorios ) {
+		    freqn[n ]++;
+		}
+		for (int i = 0; i < 10 ;i++ ){
+		        System.out.println("NÚMERO " +(i + 1 ) + " APARECE " + freqn[i] + " VEZES");
+		    } 
+	}
+}
+
+
+9.Busca Linear:
+Gere um array com 25 números aleatórios. Peça ao usuário para inserir um número e, em seguida, verifique se esse número está no array ou não. Informe ao usuário o resultado da busca.
+
+import java.util.Scanner;
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Scanner = new Scanner(System.in);
+	    Random random = new Random();
+	    int tamArray = 1;
+	    
+	    int[] nAleatorios = new int[tamArray];
+    	for (int i = 0; i < tamArray; i++){
+    	     nAleatorios[i] = random.nextInt(1);
+    	    
+    	}
+    	System.out.println("BUSCAR NÚMERO: ");
+    	 int nBuscado = Scanner.nextInt();
+    	 boolean nEncontrado = false;
+    	 for (int n : nAleatorios ){
+    	    if(n == nBuscado){
+    	        nEncontrado = true;
+    	        break;
+    	    }
+    	    
+    	 }
+    	 if(nEncontrado){
+    	     System.out.println("O NÚMERO " + nBuscado + " ESTÁ NO ARRAY");
+    	 }else{
+    	     System.out.println("O NÚMERO " + nBuscado + " NÃO ESTÁ NO ARRAY");    
+    	 }
+    	 
+	    
+	}
+}
+
+
+10.Simulação de Jogo de Dados:
+Simule o lançamento de dois dados 100 vezes usando geração de números aleatórios. Conte e imprima quantas vezes a soma dos dois dados resultou em 7.
+
+import java.util.Scanner;
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Scanner = new Scanner(System.in);
+	    Random random = new Random();
+	    int sete = 0;
+	    
+    	for (int i = 0; i < 100; i++){
+    	     int dado1 = random.nextInt(6);
+    	     int dado2 = random.nextInt(6);
+    	     int soma = dado1 + dado2;
+    	     if(soma == 7){
+    	         sete++;
+    	     }
+    	    
+    	}
+    	System.out.println("O RESULTADO FOI 7 EM " + sete +" LANÇAMENTOS");
+    	 
+    	 
+	    
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Random;
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in); 
+		Random rand = new Random();
+		int nSorteado = rand.nextInt(100);
+		int nDigitado = -1;
+
+		while(nDigitado != nSorteado){
+
+			System.out.print("Digite um número de 0 a 100: ");
+			nDigitado = input.nextInt();
+
+			if(nDigitado > nSorteado){
+				System.out.println("O número digitado é maior que o sorteado!");
+			}
+			else{
+				System.out.println("O número digitado é menor que o sorteado!");
+			}
+		}
+
+		System.out.print("Parabéns!!");
+	}
+}
+
+3.Média de Valores:
+Crie um array com 20 números aleatórios. Calcule e imprima a média desses números.
+
+import java.util.Scanner;
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Scanner = new Scanner(System.in);
+	    Random random = new Random();
+	    int media = 0;
+		int soma = 0;
+		int[] array = new int[20];
+
+		for(int i = 0; i < 20; i++){
+			array[i] = random.nextInt(100);
+			soma += array[i];
+		}
+
+		media = soma/20;
+
+		System.out.print("A média do array de 20 numeros é: " + media);
+    	 
+	    
+	}
+}
