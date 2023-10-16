@@ -1,0 +1,322 @@
+public class Consulta (
+    String data;
+    float hora;
+    String especialidade;
+    String profissional;
+
+    void realizar_consulta();
+    void desmarcar(); 
+    void Quantidade de consulta();
+
+)
+
+public static void main (String[] args){
+    Consulta consulta1 = new Consulta();
+    consulta1.data = "20/10/2023";
+    consulta1.hora = "15:00";
+    consulta1.especialidade = "Dentista";
+    consulta1.profissional = "Fabio";
+
+    Consulta consulta2 = new Consulta();
+    consulta2.data = "25/10/2023";
+    consulta2.hora = "17:00";
+    consulta2.especialidade = "Clinico Geral";
+    consulta2.profissional = "Maria";
+
+    consulta1.realizar_consulta();
+
+    consulta1.System.out.println(this.data);
+
+}
+-------------------------------------------------------
+
+public class Site (
+    String liguagem;
+    String layout;
+    String tema;
+    
+    void busca();
+    void realizar_compra(); 
+
+)
+
+public static void main (String[] args){
+    Site site1 = new Site();
+    site1.linguagem = "HTML";
+    site1.layout = "Blog";
+    site1.tema = "Amanhecer";
+
+
+    Site site2 = new Site();
+    site2.linguagem = "PHP";
+    site2.layout = "Loja";
+    site2.tema = "Dracula";
+
+    site.busca();
+
+    site.System.out.println(this.tema);
+
+}
+
+---------------------------------------------------
+
+public class Sitio (
+    String tamanho;
+    String localizacao;
+    Boolean casa;
+    
+    void morar();
+    void cultivar(); 
+
+)
+
+public static void main (String[] args){
+    Sitio sitio1 = new Sitio();
+    sitio1.tamanho = "5000mtrs²";
+    sitio1.localizacao = "Minas Gerais";
+    sitio1.casa = True;
+
+    Sitio sitio2 = new Sitio();
+    sitio2.tamanho = "3000mtrs²";
+    sitio2.localizacao = "Goias";
+    sitio2.casa = False;
+
+    sitio1.cultivar();
+
+    sitio1.System.out.println(this.casa);
+
+}
+
+-----------------------------------------------------------------------
+
+public class Contabancaria (
+
+    String banco;
+    int numerodeconta;
+    int cpf;
+    String tipodeconta;
+    int digito;
+
+    void saque();
+    void depósito(); 
+
+)
+
+public static void main (String[] args){
+    Contabancaria c1 = new Contabancaria();
+    c1.banco = "Itau";
+    c1.numerodeconta = 123456;
+    c1.cpf = 12345678911;
+    c1.tipodeconta = "Corrente";
+    c1.digito = 3;
+
+    Contabancaria c2 = new Contabancaria();
+    c2.banco = "Santander";
+    c2.numerodeconta = 654912;
+    c2.cpf = 98765432199;
+    c2.tipodeconta = "Poupanca";
+    c2.digito = 7;
+
+
+    c1.saque();
+
+    c1.System.out.println(this.tipodeconta);
+
+}
+--------------------------------------------------------
+
+public class Vestido (
+   
+    String cor;
+    double preço;
+    String tamanho;
+    String tecido;
+    String costura;
+    String estampa;
+    String marca;
+
+)
+
+public static void main (String[] args){
+    Vestido vest1 = new Vestido();
+    vest1.cor = "Vermelho";
+    vest1.preco = 329.99;
+    vest1.tamanho = "G";
+    vest1.tecido = "Algodao";
+    vest1.costura = "Zigue-Zague";
+    vest1.estampa = "Flores";
+    vest1.marca = "Zara";
+
+    Vestido vest2 = new Vestido();
+    vest2.cor = "Preto";
+    vest2.preco = 129.99;
+    vest2.tamanho = "M";
+    vest2.tecido = "Linho";
+    vest2.costura = "Reta";
+    vest2.estampa = "Animais";
+    vest2.marca = "C&A";
+
+    vest1.System.out.println(this.marca);
+
+}
+
+----------------------------------------------------------
+
+public class Coringa (
+
+    Boolean palhaço;
+    Boolean saudemental;
+    String cordecabelo;
+
+    void Causarocaos();
+    void inimigodobatman();
+    void cometercrimes();
+
+)
+
+public static void main (String[] args){
+    Coringa corin1 = new Coringa();
+    corin1.palhaço = True;
+    corin1.saudemental = False;
+    corin1.cordecabelo= "Verde";
+
+    Coringa corin2 = new Coringa();
+    corin2.palhaço = True;
+    corin2.saudemental = True;
+    corin2.cordecabelo= "Vermelho";
+
+    corin1.cometercrimes();
+
+    corin1.System.out.println(this.saudemental);
+
+}
+
+-------------------------------------------------------
+
+public class Robo (
+
+    String material;
+    String memoria;
+    Boolean programavel;
+    String funcionalidades;
+
+    void funcao();
+
+)
+
+public static void main (String[] args){
+    Robo robo1 = new Robo();
+    robo1.material = "Plastico";
+    robo1.memoria = 126mb;
+    robo1.programavel = True;
+    robo1.funcionalidades = "Aspirar o chão";
+
+    Robo robo2 = new Robo();
+    robo2.material = "Metal";
+    robo2.memoria = 500mb;
+    robo2.programavel = True;
+    robo2.funcionalidades = "Lavar roupa";
+
+    robo1.funcao();
+
+    robo1.System.out.println(this.funcionalidades);
+
+}
+
+----------------------------------------------------------
+
+public class Calca (
+
+    String cor;
+    double preço;
+    String tamanho;
+    String tecido;
+    String costura;
+    String marca;
+
+)
+
+public static void main (String[] args){
+    Calca calca1 = new Calca();
+    calca1.preco = 110.99;
+    calca1.cor = "Azul";
+    calca1.tamanho = "G";
+    calca1.tecido = "Jeans";
+    calca1.costura = "Zigue-Zague";
+    calca1.marca = "Riachuelo";
+
+    Calca calca1 = new Calca();
+    calca2.preco = 79.99;
+    calca2.cor = "Preto";
+    calca2.tamanho = "P";
+    calca2.tecido = "Moletom";
+    calca2.costura = "Reto";
+    calca2.marca = "Marisa";
+
+    calca1.System.out.println(this.marca);
+
+}
+
+----------------------------------------------------
+
+public class Porta (
+
+    double tamanho
+    String cor;
+    String material;
+    Boolean macaneta;
+
+    void abrir();
+    void fechar();
+
+)
+
+public static void main (String[] args){
+    Porta porta1 = new Porta();
+    porta1.tamanho = 2.10;
+    porta1.cor = "Branca";
+    porta1.material = "Aluminio";
+    porta1.macaneta = True;
+
+    Porta porta1 = new Porta();
+    porta1.tamanho = 2.05;
+    porta1.cor = "Marrom";
+    porta1.material = "Madeira";
+    porta1.macaneta = False;
+
+    porta1.abrir();
+
+    porta1.System.out.println(this.material);
+
+}
+
+----------------------------------------------------
+
+public class Agendamento (
+    String data;
+    float hora;
+    String profissional;
+    String Assunto
+
+    void verificardisponibilidade();
+
+)
+
+public static void main (String[] args){
+    Agendamento agenda1 = new Agendamento();
+    agenda1.data = "30/09/2023";
+    agenda1.hora = "11:00";
+    agenda1.profissional = "Mayra";
+    agenda1.assunto = "Psicologo";
+
+    Agendamento agenda1 = new Agendamento();
+    agenda1.data = "10/11/2023";
+    agenda1.hora = "09:00";
+    agenda1.profissional = "Marcos";
+    agenda1.assunto = "Nutricionista";
+
+    consulta1.verificardisponibilidade();
+
+    agenda1.System.out.println(this.data);
+
+}
