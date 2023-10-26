@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+
+class Carro {
+public:
+    int a, b, c;
+
+    bool ligar() {
+        return a == 1;
+    }
+
+    bool desligar() {
+        return a == 0;
+    }
+
+    void acelerar(int velocidadeDesejada) {
+        if (a == 1) {
+            b = velocidadeDesejada;
+        }
+    }
+
+    bool freiar() {
+        if (b>0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    double tanque(double v) {
+        int t = 40;
+        return t * v;
+    }
+};
+
+int main() {
+    INICIO:
+    int k;
+    cout << "Digite 1 para encher o tanque ou 2 para dirigir ";
+    cin>>k;
+    
+    switch(k){
+    
+    case 1:
+    double v;
+    Carro Uno;
+    cout << "Digite o valor do combustível: ";
+    cin >> v;
+    cout << "O valor para encher o tanque é " << Uno.tanque(v) << endl;
+    break;
+    goto INICIO;
+    
+    case 2:
+    
+    cout << "Digite 1 para ligar ou 0 para desligar o carro: ";
+    cin >> Uno.a;
+
+    
+    
+    if (Uno.ligar()) {
+        cout << "O carro está ligado." << endl;
+        cout << "Digite a velocidade que você deseja alcançar: ";
+        int velocidadeDesejada;
+        cin >> velocidadeDesejada;
+        Uno.acelerar(velocidadeDesejada);
+        cout << "A velocidade atual do carro é: " << Uno.b << " km/h" << endl;
+        
+        while (velocidadeDesejada>0){
+        cout << "Digite 1 para freiar, 0 para parar ";
+        cin>>Uno.b;
+        if(Uno.freiar()){
+            cout << "O carro foi freiado, Digite a nova velocidade" << endl;
+            cin >> velocidadeDesejada;
+            cout << "A velocidade atual do carro é: " << velocidadeDesejada << " km/h" << endl;
+            if(velocidadeDesejada = 0);
+            cout << "O carro parau" << endl;
+        }else{
+            cout << "O carro está parado" << endl;
+            velocidadeDesejada = 0;
+        }
+        }
+        
+    } else {
+        cout << "O carro está desligado." << endl;
+    }
+    break;
+    goto INICIO;
+}}
